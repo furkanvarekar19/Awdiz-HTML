@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-7</title>
+    <style>
+        body{
+            background-color: lightgrey;
+            font-family: sans-serif;
+        }
+        label{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        h2{
+            font-size: 25px;
+        }
+        .fav{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        span{
+            /* color: rgb(255, 5, 5); */
+            color: #4a05eb;
+            font-family:cursive;
+            font-weight: 800;
+        }
+        button{
+            height: 35px;
+            width: 130px;
+            font-size: 19px;
+            background-color: indigo;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day-7</h1>
+
+    <h2>Radio</h2>
+    <input type="radio" name="lang" id="html" value="html"> 
+    <label for="html">HTML</label><br>
+
+    <input type="radio" name="lang" id="css" value="css"> 
+    <label for="css">CSS</label><br>
+
+    <input type="radio" name="lang" id="js" value="js">
+    <label for="js">JavaScript</label>
+    
+    <h2>Checkbox</h2>
+
+    <input type="checkbox" name="sports" id="cricket" value="cricket">
+     <label for="cricket">Cricket</label> <br>
+
+     <input type="checkbox" name="sports" id="Football" value="Football">
+     <label for="Football">Football</label> <br>
+
+     <input type="checkbox" name="sports" id="Basketball" value="Basketball">
+     <label for="Basketball">Basketball</label> <br>
+
+    <h2>Select and option</h2>
+
+    <label for="" class="fav">Select your favourite language :</label>
+    <select name="language" id="language">
+        <option value="">Select your favourite language</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="react">React-js</option>
+    </select><br> <br> <br> <br> <br>
+
+    <h2>Input tag with <span>size</span> attribute..</h2> 
+    <input type="text" placeholder="default size is 22">
+    <input type="text" placeholder="size is 10" size="10">
+
+    <h2>Textarea tag width <span>rows and cols</span> attribute</h2>
+    <textarea  cols="20" rows="6" placeholder="6 rows and 16 cols"></textarea>
+    <textarea name="" id="" cols="20" rows="3"></textarea>
+
+    <h2>Button tag with onclick event..</h2>
+    <button onclick="alert('Welcome to Awdiz')">Click here..</button>
+
+</body>
+</html>
