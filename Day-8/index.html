@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-8</title>
+
+    <style>
+        
+        body{
+         font-family: sans-serif;
+        
+      
+        }
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+        legend,h1{
+            color: rgb(31, 31, 232);
+            font-weight: 600;
+        }
+        h2{
+            font-family: cursive;
+            color: rgb(1, 89, 118);
+        }
+        .hover{
+            height: 180px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .hover:hover{
+            border: 4px solid  blue;
+        }
+        #text:valid {
+        background-color: green;
+      }
+
+    </style>
+   
+</head>
+<body>
+    <h1>Day-8</h1>
+    <h2>Fieldset and Legend Tag</h2>
+
+    <form action="">
+        <fieldset>
+            <legend>SIGN IN</legend> <br>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email"> <br><br>
+            <label for="Password">Password :</label>
+            <input type="password" name="Password" id="Password"> <br> <br>
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <h2>Value attribute with readonly & disabled and other different input types..</h2>
+
+    <input type="submit" value="Sign in"> <br> <br>
+
+    <input type="text" value="king"> <br> <br>
+
+    <input type="range" name="" id="" min="0" max="10" value="7"> <br> <br>
+
+    <label for="">Readonly :</label>
+    <input type="text" readonly value="Readonly"> <br> <br>
+
+    <label for="">Disabled :</label>
+    <input type="text" disabled value="disabled"> <br> <br>
+
+    <h2>Size attribute</h2>
+    <input type="text" placeholder="Default size"> <br> <br>
+    <input type="text" size="27" placeholder="size is 27"> <br> <br>
+
+
+    <h2>Maxlength, min and max attribute</h2>
+
+    <input type="text" maxlength="10" placeholder="maxlength is 10"> <br> <br>
+
+    <label for="">Min is 1 amd max is 100 :</label>
+    <input type="number" min="1" max="100"> <br> <br>
+
+    <h2>Hover pattern and autofocus attribute</h2>
+    <div class="hover">
+        Testing hover
+    </div>
+
+    <h2>Pattern</h2>
+
+    <form onsubmit="">
+        <input id="text" type="text" pattern="\w{3,13}" required /> <br> <br>
+        <input id="text" type="password" pattern="\w{4,4}" required /> <br>
+        <input  type="submit" />
+      </form>
+
+    <h2>Autofocus</h2>
+    <input type="text" >
+    <input type="text" >
+    <input type="text" placeholder="Autofocus" autofocus> <br> <br>
+
+  <h2>Title and novalidate attribute</h2>
+  <h3 title="You just hovered on hii, tooltip">Title</h3>
+
+  <form novalidate>
+    <label>Email :</label><br />
+    <input required /><br />
+    <label>Password :</label><br /> 
+    <input /><br /><br/>
+    <input type="submit" />
+  </form>
+
+  <h2>Canvas and SVG tag</h2>
+
+  <canvas
+  id="myCanvas"
+  width="200"
+  height="100"
+  style="border: 1px solid #000000"
+>
+</canvas>
+<br>
+<svg width="100" height="100">
+    <circle
+      cx="50"
+      cy="50"
+      r="40"
+      stroke="green"
+      strokewidth="4"
+      fill="blue"
+    />
+  </svg>
+
+</body>
+</html>
