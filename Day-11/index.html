@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-11</title>
+    <style>
+        body{
+           margin-left: 50px;
+           font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #outlines{
+            margin-top: 40px;
+            height: 280px;
+            width: 280px;
+            border: 3px solid #000;
+            color: darkblue;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 22px;
+             outline: 4px solid rgb(2, 67, 104);
+             outline-offset: 15px;
+        }
+        .a{
+            text-align: left;
+        }
+        .b{
+            text-align: right;
+        }
+        .c{
+            text-align: center;
+        }
+        .d{
+            text-align: justify;
+        }
+        .e{
+            text-align: center;
+        }
+        .f{
+            text-align: right;
+        }
+        h3{
+            color: indigo;
+            font-weight: 600;
+            font-size: 24px;
+        }
+        .over{
+            text-decoration: overline;
+        }
+        .under{
+            text-decoration: underline;
+        }
+        .line{
+            text-decoration: line-through;
+        }
+        .over-under{
+            text-decoration: overline underline;
+        }
+        a{
+            font-size: 18px;
+            text-decoration: none;
+        }
+        #indent{
+            text-indent: 100px;
+        }
+        #spacing{
+            letter-spacing: 12px;
+        }
+        #word{
+            word-spacing: 20px;
+        }
+        #line-height{
+            line-height: 60px;
+        }
+        h4{
+            text-shadow: 20px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day-11</h1> 
+
+    <h2>Testing Outline</h2>
+    <div id="outlines">
+        Testing Outline
+    </div> 
+    <br/> <br/>
+
+    <h2 class="a">Testing text-align-left</h2>
+    <h2 class="b">Testing text-align-right</h2>
+    <h2 class="c">Testing text-align-center</h2>
+
+    <h2>Testing text-align-justify</h2>
+    <p class="d">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, 
+    hic molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+     molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+     molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+    </p>
+
+    <h2>Testing text-align-center</h2>
+    <p class="e">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, 
+    hic molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+     molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+     molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+    </p>
+
+    <h2>Testing text-align-right</h2>
+    <p class="f">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, 
+    hic molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+     molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+     molestias totam earum obcaecati pariatur est tempore voluptatem dolores enim nemo
+     nostrum, harum repudiandae nobis officia necessitatibus tenetur rerum fugiat?
+    </p>
+ <br/>
+
+    <h2>Testing text-decoration-line</h2>
+   
+    <h3>Overline :</h3>
+    <p class="over">Testing text-decoration-line-Overline </p>
+
+    <h3>Underline :</h3>
+    <p class="under">Testing text-decoration-line-Underline </p>
+
+    <h3>line-through :</h3>
+    <p class="line">Testing text-decoration-line-line-through </p>
+
+    <h3>overline underline :</h3>
+    <p class="over-under">Testing text-decoration-line-overline underline </p>
+
+    <h2>text-decoration: none</h2>
+    <a href="#">Click Me!</a>
+
+    <h2>style for text-decoration-line</h2>
+    <p
+    style="
+    font-size: 22px;
+      text-decoration-line: line-through;
+      text-decoration-color: brown;
+      text-decoration-style: dashed;
+      text-decoration-thickness: 8px;
+    "
+  >
+    Testing color and style for text-decoration-line
+  </p>
+
+  <h2>Testing text-transform</h2>
+
+  <p style="text-transform: lowercase">TEXT TRANSFORM</p>
+    <p style="text-transform: uppercase">text transform</p>
+    <p style="text-transform: capitalize">text transform</p>
+
+  <h2>Testing text-indent</h2>
+  <p id="indent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi commodi vel fuga! 
+    Facilis fugit quos quod esse libero provident quia quaerat molestiae et necessitatibus iste 
+    non aut velit culpa, delectus rem nemo eius dignissimos illum repellat, at, quae est.</p>
+
+    <h2>Testing letter-spacing</h2>
+    <p id="spacing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi commodi vel fuga! 
+      Facilis fugit quos quod esse libero provident quia quaerat molestiae et necessitatibus iste 
+      non aut velit culpa, delectus rem nemo eius dignissimos illum repellat, at, quae est.</p>
+
+      <h2>Testing word-spacing</h2>
+      <p id="word">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi commodi vel fuga! 
+        Facilis fugit quos quod esse libero provident quia quaerat molestiae et necessitatibus iste 
+        non aut velit culpa, delectus rem nemo eius dignissimos illum repellat, at, quae est.</p>
+
+        <h2>Testing ling-height</h2>
+        <p id="line-height">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi commodi vel fuga! 
+          Facilis fugit quos quod esse libero provident quia quaerat molestiae et necessitatibus iste 
+          non aut velit culpa, delectus rem nemo eius dignissimos illum repellat, at, quae est.
+          Facilis fugit quos quod esse libero provident quia quaerat molestiae et necessitatibus iste 
+          non aut velit culpa, delectus rem nemo eius dignissimos illum repellat, at, quae est.
+        </p>
+  
+        <h2>Testing white-space: nowrap</h2>
+
+        <p style="white-space: nowrap">
+            testin text indent testin text indent testin text indent testin text
+            indent testin text indent testin text indent testin text indent testin
+            text indent testin text indent testin text indent testin text indent
+            testin text indent testin text indent testin text indent
+          </p>
+          <h2>Testing text-shadow</h2>
+          <h4>Testing text-shadow</h4>
+</body>
+</html>
