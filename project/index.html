@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .main {
+        height: 100%;
+        width: 90%;
+        margin: auto;
+        /* border: 2px solid #000; */
+      }
+      .d-none {
+        display: none;
+      }
+      #navbar {
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 80px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      #logo {
+        width: 15%;
+        /* border: 2px solid black; */
+        display: flex;
+        align-items: center;
+      }
+      #logo > img {
+        height: 45%;
+        width: 50%;
+      }
+      #navigations {
+        width: 25%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #profile {
+        width: 20%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .border-radiusds {
+        height: 45px;
+        width: 70px;
+        font-size: 20px;
+        border-radius: 30px;
+        /* box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); */
+        border: 1px solid silver;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .border-radiusds:hover {
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      #search,
+      #filter {
+        display: none;
+      }
+
+      /* 750, 950  */
+      @media screen and (max-width: 950px) {
+        #navigations {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        #logo,
+        #profile {
+          display: none;
+        }
+        #search,
+        #filter {
+          display: block;
+          /* border: 2px solid black; */
+        }
+        #search {
+          width: 88%;
+          display: flex;
+          align-items: center;
+        }
+        .fexl {
+          display: flex;
+          /* justify-content: space-around; */
+        }
+
+        #search .fa-magnifying-glass {
+          color: black;
+          margin-left: 8px;
+          font-size: 22px;
+        }
+        .weeks {
+          margin-left: 20px;
+        }
+        .weeks h5 {
+          font-weight: 400;
+          font-size: 16px;
+        }
+        .weeks p {
+          font-weight: 400;
+          font-size: 12px;
+          color: gray;
+        }
+        #filter {
+          width: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .fa-bars {
+          height: 40px;
+          width: 50px;
+          /* background-color: bisque; */
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      #check_out {
+        height: 80px;
+        width: 60%;
+        margin: auto;
+        border: 2px solid #000;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 5px 4px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .one_div {
+        /* border: 1px solid #000; */
+        /* margin-left: 10px; */
+        /* height: 100%; */
+        width: 36%;
+      }
+      /* .one_div:hover {
+        background-color: #ccc;
+      } */
+      .one_div h2 {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .one_div p {
+        font-size: 15px;
+        font-weight: 300;
+      }
+      .two_div {
+        /* border: 1px solid #854949; */
+        width: 15%;
+        /* height: 100%; */
+      }
+      .two_div h2 {
+        font-size: 14px;
+      }
+      .two_div p {
+        font-size: 14px;
+        /* margin-top: 0px; */
+      }
+
+      .three_div {
+        /* border: 1px solid #854949; */
+        width: 15%;
+        /* height: 100%; */
+      }
+      .three_div h2 {
+        font-size: 14px;
+      }
+      .three_div p {
+        font-size: 14px;
+        /* margin-top: 0px; */
+      }
+
+      .fourth_div {
+        width: 28%;
+        /* border: 1px solid #854949; */
+        /* height: 100%; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .fourth_div i {
+        height: 45px;
+        width: 45px;
+        background-color: #ff385c;
+        color: #fff;
+        border-radius: 50%;
+        /* padding: 8px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .filters {
+        margin-top: 10px;
+        height: 80px;
+        /* background-color: lightblue; */
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .filters_1 {
+        width: 70%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .box-1 {
+        height: 60px;
+        text-align: center;
+      }
+
+      .box-1 img {
+        height: 32px;
+      }
+      .box-1 p {
+        font-size: 13px;
+      }
+      .filters_2 {
+        width: 25%;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .ones {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 14px;
+        margin: 15px;
+        height: 45px;
+        width: 27%;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      .ones:hover {
+        border: 1px solid black;
+      }
+      .twos {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 15px;
+        height: 55px;
+        width: 70%;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      .twos:hover {
+        border: 1px solid #000;
+      }
+      .twos p {
+        font-size: 13px;
+        margin-right: 10px;
+        font-weight: 500;
+      }
+      .twos i {
+        font-size: 27px;
+        color: #9f9d9d;
+      }
+
+      .guest_fav_main {
+        margin-top: 20px;
+        /* height: 500px; */
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-bottom: 50px; */
+        /* background-color: lightblue; */
+      }
+      .guest_fav {
+        height: 400px;
+        width: 24%;
+        /* border: 1px solid #000; */
+        border-radius: 12px;
+      }
+      .guest_fav img {
+        width: 100%;
+        height: 70%;
+        border-radius: 12px;
+        position: relative;
+      }
+
+      #turkey {
+        display: flex;
+        justify-content: space-between;
+        line-height: 30px;
+      }
+      #turkey h4 {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .fa-star {
+        color: gold;
+        font-size: 13px;
+      }
+      .silvers {
+        color: #9b9a9a;
+        font-weight: 500;
+        /* letter-spacing: 1px; */
+      }
+      .night {
+        margin-top: 10px;
+      }
+      .dark {
+        color: #000;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="navbar">
+        <div id="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
+            alt="Logo"
+          />
+        </div>
+
+        <div id="navigations">
+          <a href="#">Stays</a>
+          <a href="#">Experience</a>
+          <a href="#"> Online Experience</a>
+        </div>
+
+        <div id="profile">
+          <div>
+            <p>Aribnb your home</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="border-radiusds">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-regular fa-user"></i>
+          </div>
+        </div>
+
+        <div id="search">
+          <div
+            class="fexl"
+            style="
+              border: 1px solid grey;
+              padding: 10px;
+              width: 100%;
+              border-radius: 25px;
+            "
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="weeks">
+              <h5>Anywhere</h5>
+              <p>Any week . Add guests</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="filter">
+          <div class="fa-bar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <div id="check_out">
+        <div class="one_div">
+          <span>Where</span><br />
+          <p>Search destinations</p>
+        </div>
+        <!-- <p class="a">|</p>   -->
+        <div class="two_div">
+          <h2>Check in</h2>
+          <p>Add dates</p>
+        </div>
+        <!-- <p class="a">|</p>   -->
+
+        <div class="three_div">
+          <h2>Check out</h2>
+          <p>Add dates</p>
+        </div>
+        <!-- <p class="a">|</p>   -->
+
+        <div class="fourth_div">
+          <div>
+            <h6>Who</h6>
+            <p>Add dates</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <hr />
+
+      <div class="filters">
+        <div class="filters_1">
+          <div class="box-1">
+            <img src="./img-1.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-2.jpg" alt="svg" />
+            <p>Tiny homes</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-3.jpg" alt="svg" />
+            <p>Beachfront</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-4.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-5.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-6.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-7.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-8.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+          <div class="box-1">
+            <img src="./img-9.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+
+          <div class="box-1">
+            <img src="./img-10.jpg" alt="svg" />
+            <p>Canves</p>
+          </div>
+        </div>
+
+        <div class="filters_2">
+          <div class="ones">
+            <i class="fa-solid fa-bars"></i>
+            <p>Filters</p>
+          </div>
+
+          <div class="twos">
+            <p>Display total before taxes</p>
+            <i class="fa-solid fa-toggle-on"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="guest_fav_main">
+        <!-- one main  -->
+
+        <div class="guest_fav">
+          <!-- <div class="guestfavourite"> -->
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-611964103002302908/original/ede7b8fc-9f6a-40ec-8f58-45b19d941a18.jpeg?im_w=720"
+            alt="img"
+          />
+
+          <!-- </div> -->
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/f18dad97-7d8b-444a-9d94-1a428f37f36b.jpg?im_w=720"
+            alt="img"
+          />
+
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/ea34ac88-2977-4d01-b8a7-f56e5e5700a4.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/41912165/e6ab5568_original.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-945552515163782010/original/6300df88-af2e-4620-a73e-7660def9895f.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/3e13ae05-69b2-4da8-8367-6e8aca8e44c1.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-52316210/original/f52d2022-77bf-48b5-a8c2-6194001b052e.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-923807131957898305/original/2b18ca85-0187-4715-96f6-c30ad7648d6d.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/0ed5f5be-8449-4423-bd4f-45e8c39c573b.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/101751a5-e8a0-41ac-b4cc-546402086702.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/6e13dd98-29f1-4a4f-a7a1-29c382480e60.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/53afb838-d3be-42c2-ada0-60ec4b78893a.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/59b32194-67b3-4ef2-a839-9aeb26402019.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/ec3f0bd6-55c5-45fb-8724-1d99104b7c70.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-883787377234185143/original/6aea90ad-7425-43da-b62d-a60365d5b8b1.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/e2ec4979-760e-4c96-abc2-c3be005301d9.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-803206235177182853/original/ce0a01a7-d685-477b-a01d-992e53ce190e.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-943524663566230776/original/de36a82d-b12f-4a70-97b2-6a213a0a48ee.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-824678192424913331/original/dc7811fc-5c6d-47bb-9c50-e7e3c55a8962.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-871448291179190580/original/c0cd8527-0372-41f2-b75c-6b95b7fb3a84.jpeg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <!-- <div class="guestfavourite"> -->
+          <img
+            src="https://a0.muscache.com/im/pictures/miso/Hosting-611964103002302908/original/ede7b8fc-9f6a-40ec-8f58-45b19d941a18.jpeg?im_w=720"
+            alt="img"
+          />
+
+          <!-- </div> -->
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/f18dad97-7d8b-444a-9d94-1a428f37f36b.jpg?im_w=720"
+            alt="img"
+          />
+
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/ea34ac88-2977-4d01-b8a7-f56e5e5700a4.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+        <div class="guest_fav">
+          <img
+            src="https://a0.muscache.com/im/pictures/41912165/e6ab5568_original.jpg?im_w=720"
+            alt="img"
+          />
+          <div>
+            <div id="turkey">
+              <h4>Ortahisar, Turkey</h4>
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <p style="display: inline-block">5.0</p>
+              </div>
+            </div>
+          </div>
+          <p class="silvers">4,252 Lorem psum Lorem</p>
+          <p class="silvers">13-18 Apr</p>
+          <p class="night"><span class="dark"> ₹5,993</span> night</p>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
