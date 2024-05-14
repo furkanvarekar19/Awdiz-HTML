@@ -10,339 +10,10 @@
       referrerpolicy="no-referrer"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .main {
-        height: 100%;
-        width: 90%;
-        margin: auto;
-        /* border: 2px solid #000; */
-      }
-      .d-none {
-        display: none;
-      }
-      #navbar {
-        width: 100%;
-        /* border: 2px solid red; */
-        height: 80px;
-        position: sticky;
-        top: 0;
-        left: 0;
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-      }
-      #logo {
-        width: 15%;
-        /* border: 2px solid black; */
-        display: flex;
-        align-items: center;
-      }
-      #logo > img {
-        height: 45%;
-        width: 50%;
-      }
-      #navigations {
-        width: 25%;
-        /* border: 2px solid black; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #profile {
-        width: 20%;
-        /* border: 2px solid black; */
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      .border-radiusds {
-        height: 45px;
-        width: 70px;
-        font-size: 20px;
-        border-radius: 30px;
-        /* box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); */
-        border: 1px solid silver;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      .border-radiusds:hover {
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-      }
-
-      #search,
-      #filter {
-        display: none;
-      }
-
-      /* 750, 950  */
-      @media screen and (max-width: 950px) {
-        #navigations {
-          display: none;
-        }
-      }
-      @media screen and (max-width: 650px) {
-        #logo,
-        #profile {
-          display: none;
-        }
-        #search,
-        #filter {
-          display: block;
-          /* border: 2px solid black; */
-        }
-        #search {
-          width: 88%;
-          display: flex;
-          align-items: center;
-        }
-        .fexl {
-          display: flex;
-          /* justify-content: space-around; */
-        }
-
-        #search .fa-magnifying-glass {
-          color: black;
-          margin-left: 8px;
-          font-size: 22px;
-        }
-        .weeks {
-          margin-left: 20px;
-        }
-        .weeks h5 {
-          font-weight: 400;
-          font-size: 16px;
-        }
-        .weeks p {
-          font-weight: 400;
-          font-size: 12px;
-          color: gray;
-        }
-        #filter {
-          width: 10%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .fa-bars {
-          height: 40px;
-          width: 50px;
-          /* background-color: bisque; */
-          border: 1px solid rgba(0, 0, 0, 0.3);
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-
-      #check_out {
-        height: 80px;
-        width: 60%;
-        margin: auto;
-        border: 2px solid #000;
-        border-radius: 30px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        box-shadow: 5px 4px 3px rgba(0, 0, 0, 0.3);
-      }
-
-      .one_div {
-        /* border: 1px solid #000; */
-        /* margin-left: 10px; */
-        /* height: 100%; */
-        width: 36%;
-      }
-      /* .one_div:hover {
-        background-color: #ccc;
-      } */
-      .one_div h2 {
-        font-size: 14px;
-        font-weight: 500;
-      }
-      .one_div p {
-        font-size: 15px;
-        font-weight: 300;
-      }
-      .two_div {
-        /* border: 1px solid #854949; */
-        width: 15%;
-        /* height: 100%; */
-      }
-      .two_div h2 {
-        font-size: 14px;
-      }
-      .two_div p {
-        font-size: 14px;
-        /* margin-top: 0px; */
-      }
-
-      .three_div {
-        /* border: 1px solid #854949; */
-        width: 15%;
-        /* height: 100%; */
-      }
-      .three_div h2 {
-        font-size: 14px;
-      }
-      .three_div p {
-        font-size: 14px;
-        /* margin-top: 0px; */
-      }
-
-      .fourth_div {
-        width: 28%;
-        /* border: 1px solid #854949; */
-        /* height: 100%; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .fourth_div i {
-        height: 45px;
-        width: 45px;
-        background-color: #ff385c;
-        color: #fff;
-        border-radius: 50%;
-        /* padding: 8px; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      a {
-        text-decoration: none;
-        color: #000;
-      }
-      .filters {
-        margin-top: 10px;
-        height: 80px;
-        /* background-color: lightblue; */
-        display: flex;
-        justify-content: space-evenly;
-      }
-
-      .filters_1 {
-        width: 70%;
-        /* border: 2px solid black; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .box-1 {
-        height: 60px;
-        text-align: center;
-      }
-
-      .box-1 img {
-        height: 32px;
-      }
-      .box-1 p {
-        font-size: 13px;
-      }
-      .filters_2 {
-        width: 25%;
-        /* border: 2px solid black; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .ones {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        font-size: 14px;
-        margin: 15px;
-        height: 45px;
-        width: 27%;
-        border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.3);
-      }
-      .ones:hover {
-        border: 1px solid black;
-      }
-      .twos {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 15px;
-        height: 55px;
-        width: 70%;
-        border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.3);
-      }
-      .twos:hover {
-        border: 1px solid #000;
-      }
-      .twos p {
-        font-size: 13px;
-        margin-right: 10px;
-        font-weight: 500;
-      }
-      .twos i {
-        font-size: 27px;
-        color: #9f9d9d;
-      }
-
-      .guest_fav_main {
-        margin-top: 20px;
-        /* height: 500px; */
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        /* margin-bottom: 50px; */
-        /* background-color: lightblue; */
-      }
-      .guest_fav {
-        height: 400px;
-        width: 24%;
-        /* border: 1px solid #000; */
-        border-radius: 12px;
-      }
-      .guest_fav img {
-        width: 100%;
-        height: 70%;
-        border-radius: 12px;
-        position: relative;
-      }
-
-      #turkey {
-        display: flex;
-        justify-content: space-between;
-        line-height: 30px;
-      }
-      #turkey h4 {
-        font-size: 14px;
-        font-weight: 600;
-        letter-spacing: 1px;
-      }
-      .fa-star {
-        color: gold;
-        font-size: 13px;
-      }
-      .silvers {
-        color: #9b9a9a;
-        font-weight: 500;
-        /* letter-spacing: 1px; */
-      }
-      .night {
-        margin-top: 10px;
-      }
-      .dark {
-        color: #000;
-        font-weight: 600;
-      }
-    </style>
+    <link rel="icon" type="image/x-icon" href="data:image/jpeg;base64,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">
+   <link rel="stylesheet" href="style.css">
+    <title>Airbnb</title>
+   
   </head>
   <body>
     <div class="main">
@@ -366,12 +37,14 @@
           </div>
 
           <div>
-            <i class="fa-solid fa-globe"></i>
+            <!-- <i class="fa-solid fa-globe"></i> -->
           </div>
           <div class="border-radiusds">
             <i class="fa-solid fa-bars"></i>
             <i class="fa-regular fa-user"></i>
+            <a href="#">Login</a>
           </div>
+
         </div>
 
         <div id="search">
@@ -500,13 +173,14 @@
       <div class="guest_fav_main">
         <!-- one main  -->
 
-        <div class="guest_fav">
+        <div class="guest_fav" >
+          <a href="detailpage.html" >
           <!-- <div class="guestfavourite"> -->
           <img
             src="https://a0.muscache.com/im/pictures/miso/Hosting-611964103002302908/original/ede7b8fc-9f6a-40ec-8f58-45b19d941a18.jpeg?im_w=720"
             alt="img"
           />
-
+        </a>
           <!-- </div> -->
           <div>
             <div id="turkey">
@@ -523,11 +197,12 @@
         </div>
 
         <div class="guest_fav">
+          <a href="detailpage.html" >
           <img
             src="https://a0.muscache.com/im/pictures/f18dad97-7d8b-444a-9d94-1a428f37f36b.jpg?im_w=720"
             alt="img"
           />
-
+        </a>
           <div>
             <div id="turkey">
               <h4>Ortahisar, Turkey</h4>
@@ -543,10 +218,13 @@
         </div>
 
         <div class="guest_fav">
+          <a href="detailpage.html" >
+
           <img
             src="https://a0.muscache.com/im/pictures/ea34ac88-2977-4d01-b8a7-f56e5e5700a4.jpg?im_w=720"
             alt="img"
           />
+          </a>
           <div>
             <div id="turkey">
               <h4>Ortahisar, Turkey</h4>
@@ -562,10 +240,12 @@
         </div>
 
         <div class="guest_fav">
+          <a href="detailpage.html" >
           <img
             src="https://a0.muscache.com/im/pictures/41912165/e6ab5568_original.jpg?im_w=720"
             alt="img"
           />
+          </a>
           <div>
             <div id="turkey">
               <h4>Ortahisar, Turkey</h4>
