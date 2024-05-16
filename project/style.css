@@ -367,3 +367,25 @@
       display: none;
     }
   }
+
+  @media screen and (min-width: 767px) and (max-width: 1023px){
+    #profile{
+      width: 50%;
+    }
+    #check_out{
+      width: 90%;
+    }
+    /* .filters{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    } */
+    .filters_1{
+      width: 90%;
+    }
+    #logo > img {
+      width: 70%;
+    }
+    
+  }
+  

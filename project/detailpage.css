@@ -455,3 +455,23 @@ section {
     }
   
   }
+  @media screen and (min-width: 767px) and (max-width: 1023px){
+   .Mansion_main1{
+    height: 420px;
+    /* width: 40%; */
+   }
+   .Mansion1,.Mansion2,.Mansion3,.Mansion4{
+    height: 200px;
+   }
+   .Mansion3{
+    top: 220px;
+    right: 29px;
+   }
+   .Mansion4{
+    top: 220px;
+
+   }
+  .shadow{
+    width: 55%;
+  }
+}
