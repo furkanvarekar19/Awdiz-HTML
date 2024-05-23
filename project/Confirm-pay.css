@@ -1,0 +1,600 @@
+body{
+  
+    font-family: "Roboto", sans-serif;
+    /* position: relative; */
+    width: 100%;
+    height: 1200px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    
+}
+#main_body{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+.confirm .fa-chevron-left{
+  font-size: 18px;
+}
+.confirm h1{
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.trip_main{
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid #000;   */
+    display: flex;
+    justify-content: space-evenly;
+}
+.trip{
+    width: 42%;
+    height: 300px;
+    /* border: 1px solid #043aa8;   */
+
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0px;
+}
+.flex p{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+.flex a{
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+.trip h2{
+    font-weight: 500;
+    font-size: 20px;
+}
+.trip1{
+    width: 40%;
+    height: 400px;
+   
+    /* border: 1px solid #0e2b75;   */
+}
+.Zeel{
+    margin-top: 15px;
+    height: 370px;
+    width: 100%;
+    /* border: 1px solid #0e2b75;   */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    /* box-shadow: 8px 8px 0px ; */
+
+}
+.Lake_flex{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.Lake_flex img{
+    margin-top: 8px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.text p{
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.text span{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 300;
+
+}
+hr{
+    width: 90%;
+    color: crimson;
+   
+}
+.pri_detl{
+    letter-spacing: 1.7px;
+    margin-bottom: 8px;
+    padding-left: 8px;
+}
+.price_detl_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px;
+}
+.price_details p{
+    letter-spacing: 1px;
+}
+.price_details a{
+    color: #000;
+    letter-spacing: 1.5px;
+}
+
+.price_details1 p{
+    letter-spacing: 1px;
+}
+.price_details1 a{
+    color: #000;
+    letter-spacing: 1.5px;
+}
+.total_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.total_main p{
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.with_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text1 h3{
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.icons img{
+    height: 16px;
+    width: 35px;
+margin-left: 6px;
+
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 35px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid  rgba(0, 0, 0, 0.5);
+    padding: 12px;
+}
+.fa-credit-card{
+    font-size: 30px;
+    color: rgb(171, 168, 168);
+}
+.box span{
+    letter-spacing: 1px;
+    color: gray;
+}
+.fa-chevron-down{
+    font-size: 20px;
+}
+.box2{
+    margin-top: 20px;
+    height: 70px;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid  #000;
+    line-height: 10px;
+}
+.a{
+    font-size: 11px;
+    padding-left: 8px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.fa-lock{
+    font-size: 10px;
+}
+.b{
+    color: gray;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding-left: 15px;
+}
+.cvv_main{
+    margin-top: 24px;
+display: flex;
+
+}
+.cvv{
+    height: 55px;
+    width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+   
+}
+.cvv p{
+    font-size: 12px;
+}
+.cvv span{
+    color: gray;
+    font-size: 15px;
+}
+.cvv1{
+    height: 55px;
+    width: 50%;
+    border: 1px solid  rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+
+}
+.cvv1 p{
+    font-size: 12px;
+    color: gray;
+}
+.cvv1 span{
+    color: gray;
+    font-size: 15px;
+}
+
+.box3{
+    margin-top: 20px;
+    height: 50px;
+    width: 90%;
+    border-radius: 6px;
+    border: 1px solid  rgba(0, 0, 0, 0.5); 
+}
+.box3 p{
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.Required_main{
+    margin-top: 35px;
+}
+.Required_main h3{
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.required_flex{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+.add{
+    /* line-height: 0px; */
+    font-size: 15px;
+    font-weight: 300;
+}
+.required_tex span{
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+.required_btn a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    border: 1px solid #000;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+.Cancellation_main{
+    margin-top: 30px;
+    line-height: 15px;
+}
+.Cancellation_main h3{
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+.Cancellation_main p{
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.Ground_main h3{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.rules p{
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+ul li{
+    font-weight: 400;
+    letter-spacing: 1.7px;
+    font-size: 16px;
+}
+.btn3_main{
+    margin-top: 40px;
+}
+.btn3_main button{
+    border: 1px solid #000;
+    font-size: 18px;
+    height: 55px;
+    width: 200px;
+    /* padding: 8px; */
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    outline: none;
+    background-color:#d90865;
+}
+
+.footer_main{
+    height: 80px;
+   background-color: #f7f7f7;
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+}
+.footer{
+     display: flex;
+   justify-content: space-between;
+   align-items: center; 
+   gap: 20px;
+   cursor: pointer;
+
+}
+li{
+/* padding-left: 30px; */
+margin-left: 27px;
+}
+ul{
+    display: flex;
+    /* padding: 0px 20px; */
+}
+.footer1{
+    display: flex;
+   justify-content: space-between;
+   align-items: center; 
+ gap: 20px;
+ cursor: pointer;
+
+
+}
+.fa-globe{
+    font-size: 18px;
+}
+.footer1 .fa-brands {
+    font-size: 20px;
+margin-left: 10px;
+
+}
+
+
+
+
+
+/* for tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    #mmain_body{
+        overflow: hidden;
+        /* box-sizing: border-box; */
+    }
+    .trip{
+        width: 49%;
+    }
+    .trip1{
+        margin-left: 35px;
+        width: 45%;
+        height: 300px;
+    }
+    .img img{
+        height: 80px;
+        padding-left: 10px;
+
+    }
+    .text p {
+        letter-spacing: 0px;
+        padding-left: 17px;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .text span{
+        font-size: 13px;
+        padding-left: 17px;
+
+    }
+    .pri_detl{
+        font-size: 16px;
+    }
+    .price_detl_main{
+        padding: 7px;
+    }
+    .price_details{
+        font-size: 14px;
+    }
+    .price_details1{
+        font-size: 14px;
+    }
+    .total_main{
+        font-size: 14px;
+        padding: 7px;
+    }
+    .rules p{
+        font-size: 15px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+    .footer_main{
+        flex-direction: column;
+        height: 110px;
+    }
+   .footer{
+    gap: 0px;
+   }
+   .footer1{
+    gap: 10px;
+   }
+
+
+}
+@media screen and (max-width: 500px) {
+    #mmain_body{
+        overflow: hidden;
+    }
+    .confirm h1 {
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .trip_main{
+        flex-direction: column;
+        height: 0;
+    }
+    .trip{
+        width: 100%;
+      height: 90px;
+    }
+    .trip1{
+        width: 100%;
+        margin-top: 125px;
+    }
+    .Zeel{
+        /* width: 100%; */
+        height: 0%;
+        border: none;
+    }
+    .img img{
+        height: 60px;
+    }
+    .text p{
+     font-size: 13px;
+      letter-spacing: 1px;
+      padding-left: 8px;
+    }
+    .text span{
+        font-size: 13px;
+        letter-spacing: 1px;
+        padding-left: 8px;
+    }
+    .pri_detl{
+      display: none;
+    }
+    .price_detl_main{
+        /* padding: 8px; */
+        display: none;
+    }
+    .price_details{
+        font-size: 15px;
+    }
+    .price_details1{
+        font-size: 15px;
+
+    }
+    .total_main{
+      display: none;
+    }
+    .Lake_flex{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        margin-top: 30px;
+    }
+    .with_main{
+        margin-top: 110px;
+    }
+    .icons{
+        display: none;
+    }
+    .box2{
+        display: none;
+    }
+    .box3{
+        display: none;
+        
+    }
+    .box{
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        line-height: 0;
+      
+    }
+    .fa-chevron-down{
+        display: none;
+       
+    }
+    .box span{
+        margin-left: 15px;
+    }
+   
+.Required_main h3{
+    font-size: 18px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+.required_tex span{
+    font-weight: 600;
+    font-size: 17px;
+    /* letter-spacing: 1px; */
+}
+.add{
+    /* line-height: 0px; */
+    font-size: 13px;
+    font-weight: 300;
+    width: 60%;
+}
+.required_btn a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #000;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+.Cancellation_main h3{
+    font-size: 18px;
+}
+.Cancellation_main p{
+    font-size: 13px;
+}
+.Ground_main h3{
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.rules p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+ul li{
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+.btn3_main button{
+    text-align: center;
+    height: 50px;
+    width: 85%;
+    font-size: 18px;
+}
+.footer_main{
+    height: 260px;
+    margin-top: 0px;
+    flex-direction: column;
+    /* background: #7d7272; */
+}
+.footer{
+flex-direction: column;
+gap: 0;
+}
+.footer1{
+    gap: 10px;
+}
+.hide{
+    display: none;
+}
+ul{
+    flex-direction: column;
+
+}
+li{
+    /* line-height: 40px; */
+    padding-top: 8px;
+}
+
+
+}
