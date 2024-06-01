@@ -290,11 +290,21 @@
     /* background-color: lightblue; */
   }
   .guest_fav {
+    position: relative;
     height: 400px;
     width: 24%;
     /* border: 1px solid #000; */
     border-radius: 12px;
     cursor: pointer;
+
+  }
+  .fa-bookmark{
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    font-size: 28px;
+    color: #55eff8;
+    /* color:d; */
 
   }
   .guest_fav img {

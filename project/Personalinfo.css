@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    height: 70px;
+    width: 100%;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+   padding: 45px;
+}
+.logo img{
+    width: 140px;
+}
+.text{
+    width: 21%;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text h3{
+font-weight: 400;
+font-size: 16px;
+letter-spacing: 1px;
+}
+.borderradius{
+    padding: 10px;
+    /* color: #fff; */
+    font-size: 15px;
+    font-size: 18px;
+}
+.margn_auto{
+    
+    height: 100%;
+    width: 80%;
+    margin: auto ;
+}
+.account{
+    margin-top: 25px;
+    width: 22%;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info h1{
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 28px;
+}
+.Legal_main{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.Legal{
+    height: 600px;
+    width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+   
+}
+.flex{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid #782424;s */
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.nametext h4{
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.nametext p{
+    font-size: 13px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.edit a{
+ color: #000;
+ font-weight: 700;
+ font-size: 15px;
+}
+
+.shown{
+    margin-top: 30px;
+    height: 650px;  
+    width: 35%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+}
+.here{
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.fa-shield-halved{
+    font-size: 45px;
+    color:#ff385c ;
+}
+.fa-lock{
+    font-size: 45px;
+    color:#ff385c ;
+}
+.fa-eye{
+    font-size: 45px;
+    color:#ff385c ;
+}
+.here_text h3{
+    margin-top: 15px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.here_para p{
+    margin-top: 15px;
+
+}
+
+/* footer section */
+.footer{
+    background:#fff;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    /* border: 1px solid #000; */
+    
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color: #000;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color: #000;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#ff385c;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px){
+    .text{
+        width: 32%;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .text h3{
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+    .account{
+        width: 35%;
+    }
+    .Legal {
+        width: 60%;
+    }
+    .shown {
+        /* margin-top: 30px; */
+        margin-left: 30px;
+        height: 700px;
+        width: 45%;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+
+    }
+    .fa-shield-halved {
+        font-size: 35px;
+        color: #ff385c;
+    }
+    .fa-lock{
+      font-size: 35px;
+    }
+    .fa-eye{
+        font-size: 35px;
+    }
+    .here_text h3 {
+        margin-top: 15px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+    .here_para p{
+        font-size: 13px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .text{
+        width: 60%;
+      
+    }
+    .text h3{
+        font-size: 12px;
+        letter-spacing: 0px;
+
+    }
+    .logo img{
+        width: 100px;
+    }
+    .account{
+        display: none;
+    }
+    .shown{
+        display: none;
+    }
+    .Legal{
+        width: 100%;
+    }
+
+}

@@ -241,13 +241,15 @@ section {
   }
   
   .footer-distributed{
-    background: #454444;
+    /* background: #454444; */
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
     padding: 55px 50px;
+    border-radius: 10px;
   }
   
   .footer-distributed .footer-left,
